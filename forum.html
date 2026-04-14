@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fórum CEFRAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<nav class="navbar px-3">
+    <span class="logo">Fórum CEFRAN</span>
+</nav>
+
+<div class="container mt-5">
+
+    <h2>💬 Fórum de Dúvidas</h2>
+    <p>Espaço para alunos tirarem dúvidas.</p>
+
+    <!-- INPUT -->
+    <textarea id="mensagem" placeholder="Digite sua dúvida..." class="form-control"></textarea>
+
+    <button onclick="enviarMensagem()" class="btn btn-curso mt-3">
+        Enviar
+    </button>
+
+    <!-- ÁREA DE MENSAGENS -->
+    <div id="chat" class="mt-4"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
