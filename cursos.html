@@ -10,30 +10,60 @@
 
 <body>
 
-<section class="cursos">
+<section class="cursos-page">
 
-  <div class="cursos-container">
+  <div class="curso-card">
+  <h3>Informática Básica</h3>
 
-    <h2>📚 Cursos Disponíveis</h2>
+  <button class="btn-curso" onclick="inscreverCurso('Informática Básica')">
+    Inscrever-se
+  </button>
+</div>
 
-    <div class="curso-card">
-      <h3>Informática Básica</h3>
-      <p>Aprenda o essencial de computadores.</p>
-    </div>
+<div class="curso-card">
+  <h3>Atendimento ao Cliente</h3>
+ 
+  <button class="btn-curso" onclick="inscreverCurso('Atendimento ao Cliente')">
+    Inscrever-se
+  </button>
+</div>
 
-    <div class="curso-card">
-      <h3>Atendimento ao Cliente</h3>
-      <p>Desenvolva habilidades profissionais.</p>
-    </div>
+<div class="curso-card">
+  <h3>Administração</h3>
 
-    <div class="curso-card">
-      <h3>Administração</h3>
-      <p>Introdução à gestão empresarial.</p>
-    </div>
-
-  </div>
+  <button class="btn-curso" onclick="inscreverCurso('Administração')">
+    Inscrever-se
+  </button>
+</div>
 
 </section>
+<div id="modalInscricao" class="modal">
+  <div class="modal-content">
 
+    <h2>Inscrição Realizada</h2>
+
+    <p id="cursoSelecionado"></p>
+
+    <button class="btn-curso" onclick="fecharModal()">
+      Fechar
+    </button>
+
+  </div>
+</div>
 </body>
 </html>
+<script>
+
+function inscreverCurso(nomeCurso) {
+
+  document.getElementById("modalInscricao").style.display = "block";
+
+  document.getElementById("cursoSelecionado").innerHTML =
+    "Você se inscreveu no curso de <strong>" + nomeCurso + "</strong>";
+}
+
+function fecharModal() {
+  document.getElementById("modalInscricao").style.display = "none";
+}
+
+</script>

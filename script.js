@@ -8,6 +8,8 @@ document.addEventListener("click", function(event) {
     const menu = document.getElementById("menuLateral");
     const btn = document.querySelector(".menu-btn");
 
+    if (!menu || !btn) return;
+
     if (!menu.contains(event.target) && !btn.contains(event.target)) {
         menu.classList.remove("ativo");
     }
