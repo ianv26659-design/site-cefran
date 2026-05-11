@@ -12,29 +12,57 @@
 
 <section class="cursos-page">
 
-  <div class="curso-card">
+ <div class="curso-card">
+
   <h3>Informática Básica</h3>
+  <p>
+    Vagas restantes:
+    <span id="vaga-info">30</span>
+  </p>
 
-  <button class="btn-curso" onclick="inscreverCurso('Informática Básica')">
+  <button class="btn-curso"
+    onclick="inscreverCurso('Informática Básica', 'vaga-info')">
+
     Inscrever-se
+
   </button>
+
 </div>
 
 <div class="curso-card">
+
   <h3>Atendimento ao Cliente</h3>
- 
-  <button class="btn-curso" onclick="inscreverCurso('Atendimento ao Cliente')">
+  <p>
+    Vagas restantes:
+    <span id="vaga-atendimento">20</span>
+  </p>
+
+  <button class="btn-curso"
+    onclick="inscreverCurso('Atendimento ao Cliente', 'vaga-atendimento')">
+
     Inscrever-se
+
   </button>
+
 </div>
 
 <div class="curso-card">
-  <h3>Administração</h3>
 
-  <button class="btn-curso" onclick="inscreverCurso('Administração')">
+  <h3>Administração</h3>
+  <p>
+    Vagas restantes:
+    <span id="vaga-admin">15</span>
+  </p>
+
+  <button class="btn-curso"
+    onclick="inscreverCurso('Administração', 'vaga-admin')">
+
     Inscrever-se
+
   </button>
+
 </div>
+
 
 </section>
 <div id="modalInscricao" class="modal">
@@ -50,20 +78,9 @@
 
   </div>
 </div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
 <script>
-
-function inscreverCurso(nomeCurso) {
-
-  document.getElementById("modalInscricao").style.display = "block";
-
-  document.getElementById("cursoSelecionado").innerHTML =
-    "Você se inscreveu no curso de <strong>" + nomeCurso + "</strong>";
-}
-
-function fecharModal() {
-  document.getElementById("modalInscricao").style.display = "none";
-}
-
-</script>

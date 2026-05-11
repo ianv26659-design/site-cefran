@@ -80,3 +80,29 @@ function revealOnScroll() {
 }
 
 window.addEventListener("scroll", revealOnScroll);
+function inscreverCurso(nomeCurso, idVaga) {
+
+  const vagaElemento = document.getElementById(idVaga);
+
+  let vagas = parseInt(vagaElemento.innerText);
+
+  if(vagas > 0) {
+
+    vagas--;
+
+    vagaElemento.innerText = vagas;
+
+    document.getElementById("modalInscricao").style.display = "block";
+
+    document.getElementById("cursoSelecionado").innerHTML =
+      "Você se inscreveu no curso de <strong>" + nomeCurso + "</strong>";
+
+  } else {
+
+    alert("Não há mais vagas disponíveis.");
+
+  }
+}
+function fecharModal() {
+  document.getElementById("modalInscricao").style.display = "none";
+}
