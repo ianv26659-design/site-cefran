@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login do Professor</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <span class="logo">Área do Professor</span>
+</nav>
+
+<section class="cursos-page">
+
+<div class="cursos-container">
+
+<h2>Login do Professor</h2>
+
+<input type="text" id="usuarioProfessor" placeholder="Usuário" class="input-login">
+
+<input type="password" id="senhaProfessor" placeholder="Senha" class="input-login">
+
+<button class="btn-curso" onclick="loginProfessor()">
+Entrar
+</button>
+
+<p id="mensagemProfessor"></p>
+
+</div>
+
+</section>
+
+<script>
+function loginProfessor() {
+  const usuario = document.getElementById("usuarioProfessor").value;
+  const senha = document.getElementById("senhaProfessor").value;
+
+  if(usuario === "professor" && senha === "123") {
+    window.location.href = "professor.html";
+  } else {
+    document.getElementById("mensagemProfessor").innerHTML = "Usuário ou senha inválidos";
+  }
+}
+</script>
+
+</body>
+</html>
